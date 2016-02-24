@@ -1,3 +1,4 @@
+
 var todo = function(attributes){
 	this.id = attributes.id;
 	this.task= attributes.task,
@@ -14,7 +15,9 @@ todoList.prototype.addTask= function(todo){
 }
 
 todoList.prototype.completeTask = function(todo){
-	this.todoArray.pop(todo);
+	var index = todoList.indexOf(todo);
+
+	this.todoArray.splice(index, 1);
 	todo.completed = true;
 	// $(this).toggleClass("completed");
 }
