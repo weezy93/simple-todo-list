@@ -15,11 +15,11 @@ todoList.prototype.addTask= function(todo){
 }
 
 todoList.prototype.completeTask = function(todo){
-	var index = todoList.indexOf(todo);
+	var index = this.todoArray.indexOf(todo);
 
 	this.todoArray.splice(index, 1);
 	todo.completed = true;
-	// $(this).toggleClass("completed");
+	console.log(myTodos.todoArray);
 }
 
 
